@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Components Gallery | Modern Design System</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <i class="fas fa-palette"></i>
+          <span>UI Gallery</span>
+        </div>
+        <div class="nav-controls">
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search" placeholder="Search components..." />
+          </div>
+          <div class="theme-toggle">
+            <button id="themeToggle" class="theme-btn">
+              <i class="fas fa-moon"></i>
+              <span>Dark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+      <div class="hero-content">
+        <h1><span class="gradient-text">UI Components</span> Gallery</h1>
+        <p class="subtitle">
+          A curated collection of beautiful, reusable UI components for modern
+          web development
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <i class="fas fa-code"></i>
+            <div>
+              <h3>5+</h3>
+              <p>Components</p>
+            </div>
+          </div>
+          <div class="stat">
+            <i class="fas fa-paint-brush"></i>
+            <div>
+              <h3>2</h3>
+              <p>Themes</p>
+            </div>
+          </div>
+          <div class="stat">
+            <i class="fas fa-copy"></i>
+            <div>
+              <h3>Easy</h3>
+              <p>Copy & Paste</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          ></path>
+        </svg>
+      </div>
+    </header>
+
+    <!-- Filter Controls -->
+    <section class="filter-section">
+      <div class="container">
+        <div class="filter-header">
+          <h2><i class="fas fa-filter"></i> Filter Components</h2>
+          <p class="filter-subtitle">Click on any tag to filter components</p>
+        </div>
+
+        <div class="filter-tags">
+          <button class="filter-tag active" data-filter="all">All</button>
+          <button class="filter-tag" data-filter="button">
+            <i class="fas fa-hand-pointer"></i> Buttons
+          </button>
+          <button class="filter-tag" data-filter="card">
+            <i class="far fa-id-card"></i> Cards
+          </button>
+          <button class="filter-tag" data-filter="alert">
+            <i class="fas fa-exclamation-circle"></i> Alerts
+          </button>
+          <button class="filter-tag" data-filter="modal">
+            <i class="fas fa-window-maximize"></i> Modals
+          </button>
+          <button class="filter-tag" data-filter="form">
+            <i class="fas fa-edit"></i> Forms
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+      <!-- BUTTON COMPONENT -->
+      <section class="component" data-type="button">
+        <div class="component-header">
+          <div class="component-title">
+            <i class="fas fa-hand-pointer component-icon"></i>
+            <h2>Buttons</h2>
+            <span class="component-badge">Interactive</span>
+          </div>
+          <p class="component-description">
+            Beautiful button variants with hover effects and smooth transitions
+          </p>
+        </div>
+
+        <div class="preview">
+          <div class="preview-header">
+            <h3><i class="fas fa-eye"></i> Preview</h3>
+            <div class="preview-actions">
+              <button class="preview-btn copy-btn" data-target="button-code">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+              <button class="preview-btn expand-btn" data-target="button-code">
+                <i class="fas fa-expand"></i> Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="preview-content">
+            <button class="btn primary">
+              <i class="fas fa-rocket"></i> Primary Button
+            </button>
+            <button class="btn secondary">
+              <i class="fas fa-cog"></i> Secondary
+            </button>
+            <button class="btn success">
+              <i class="fas fa-check"></i> Success
+            </button>
+            <button class="btn warning">
+              <i class="fas fa-exclamation-triangle"></i> Warning
+            </button>
+            <button class="btn danger">
+              <i class="fas fa-times"></i> Danger
+            </button>
+            <button class="btn outline">
+              <i class="fas fa-star"></i> Outline
+            </button>
+          </div>
+        </div>
+
+        <div class="code-container collapsed" id="button-code">
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="html">HTML</button>
+            <button class="code-tab" data-tab="css">CSS</button>
+          </div>
+
+          <div class="code-content">
+            <div class="code-block html-code active">
+              <pre><code class="language-html">&lt;!-- Primary Button --&gt;
+&lt;button class="btn primary"&gt;
+  &lt;i class="fas fa-rocket"&gt;&lt;/i&gt; Primary Button
+&lt;/button&gt;
+
+&lt;!-- Secondary Button --&gt;
+&lt;button class="btn secondary"&gt;
+  &lt;i class="fas fa-cog"&gt;&lt;/i&gt; Secondary
+&lt;/button&gt;
+
+&lt;!-- Success Button --&gt;
+&lt;button class="btn success"&gt;
+  &lt;i class="fas fa-check"&gt;&lt;/i&gt; Success
+&lt;/button&gt;</code></pre>
+            </div>
+
+            <div class="code-block css-code">
+              <pre><code class="language-css">/* Button Base Styles */
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Primary Button */
+.btn.primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(var(--primary-rgb), 0.4);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD COMPONENT -->
+      <section class="component" data-type="card">
+        <div class="component-header">
+          <div class="component-title">
+            <i class="far fa-id-card component-icon"></i>
+            <h2>Cards</h2>
+            <span class="component-badge">Layout</span>
+          </div>
+          <p class="component-description">
+            Versatile card components perfect for displaying content in a clean,
+            organized layout
+          </p>
+        </div>
+
+        <div class="preview">
+          <div class="preview-header">
+            <h3><i class="fas fa-eye"></i> Preview</h3>
+            <div class="preview-actions">
+              <button class="preview-btn copy-btn" data-target="card-code">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+              <button class="preview-btn expand-btn" data-target="card-code">
+                <i class="fas fa-expand"></i> Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="preview-content grid-layout">
+            <div class="card">
+              <div class="card-header">
+                <i class="fas fa-gem card-icon"></i>
+                <h3 class="card-title">Premium Card</h3>
+              </div>
+              <p class="card-description">
+                A beautiful card component with elegant design and smooth hover
+                effects.
+              </p>
+              <div class="card-footer">
+                <button class="btn primary card-btn">Learn More</button>
+                <span class="card-tag">Popular</span>
+              </div>
+            </div>
+
+            <div class="card outline">
+              <div class="card-header">
+                <i class="fas fa-lightbulb card-icon"></i>
+                <h3 class="card-title">Outline Card</h3>
+              </div>
+              <p class="card-description">
+                Card with border-only styling, perfect for subtle content
+                presentation.
+              </p>
+              <div class="card-footer">
+                <button class="btn outline card-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-container collapsed" id="card-code">
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="html">HTML</button>
+            <button class="code-tab" data-tab="css">CSS</button>
+          </div>
+
+          <div class="code-content">
+            <div class="code-block html-code active">
+              <pre><code class="language-html">&lt;div class="card"&gt;
+  &lt;div class="card-header"&gt;
+    &lt;i class="fas fa-gem card-icon"&gt;&lt;/i&gt;
+    &lt;h3 class="card-title"&gt;Premium Card&lt;/h3&gt;
+  &lt;/div&gt;
+  &lt;p class="card-description"&gt;Card description content here.&lt;/p&gt;
+  &lt;div class="card-footer"&gt;
+    &lt;button class="btn primary card-btn"&gt;Action&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-block css-code">
+              <pre><code class="language-css">/* Card Base Styles */
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.card.outline {
+  background: transparent;
+  border: 2px solid var(--border);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ALERT COMPONENT -->
+      <section class="component" data-type="alert">
+        <div class="component-header">
+          <div class="component-title">
+            <i class="fas fa-exclamation-circle component-icon"></i>
+            <h2>Alerts</h2>
+            <span class="component-badge">Feedback</span>
+          </div>
+          <p class="component-description">
+            Informative alert messages to provide feedback to users about
+            actions or system status
+          </p>
+        </div>
+
+        <div class="preview">
+          <div class="preview-header">
+            <h3><i class="fas fa-eye"></i> Preview</h3>
+            <div class="preview-actions">
+              <button class="preview-btn copy-btn" data-target="alert-code">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+              <button class="preview-btn expand-btn" data-target="alert-code">
+                <i class="fas fa-expand"></i> Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="preview-content flex-column">
+            <div class="alert success">
+              <i class="fas fa-check-circle alert-icon"></i>
+              <div class="alert-content">
+                <h4>Success!</h4>
+                <p>Your changes have been saved successfully.</p>
+              </div>
+              <button class="alert-close">&times;</button>
+            </div>
+
+            <div class="alert warning">
+              <i class="fas fa-exclamation-triangle alert-icon"></i>
+              <div class="alert-content">
+                <h4>Warning</h4>
+                <p>
+                  This action cannot be undone. Please proceed with caution.
+                </p>
+              </div>
+              <button class="alert-close">&times;</button>
+            </div>
+
+            <div class="alert error">
+              <i class="fas fa-times-circle alert-icon"></i>
+              <div class="alert-content">
+                <h4>Error</h4>
+                <p>Something went wrong. Please try again later.</p>
+              </div>
+              <button class="alert-close">&times;</button>
+            </div>
+
+            <div class="alert info">
+              <i class="fas fa-info-circle alert-icon"></i>
+              <div class="alert-content">
+                <h4>Information</h4>
+                <p>New features are available in the settings panel.</p>
+              </div>
+              <button class="alert-close">&times;</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="code-container collapsed" id="alert-code">
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="html">HTML</button>
+            <button class="code-tab" data-tab="css">CSS</button>
+          </div>
+
+          <div class="code-content">
+            <div class="code-block html-code active">
+              <pre><code class="language-html">&lt;div class="alert success"&gt;
+  &lt;i class="fas fa-check-circle alert-icon"&gt;&lt;/i&gt;
+  &lt;div class="alert-content"&gt;
+    &lt;h4&gt;Success!&lt;/h4&gt;
+    &lt;p&gt;Your changes have been saved.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class="alert-close"&gt;&times;&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;div class="alert error"&gt;
+  &lt;i class="fas fa-times-circle alert-icon"&gt;&lt;/i&gt;
+  &lt;div class="alert-content"&gt;
+    &lt;h4&gt;Error&lt;/h4&gt;
+    &lt;p&gt;Something went wrong.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button class="alert-close"&gt;&times;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-block css-code">
+              <pre><code class="language-css">/* Alert Base Styles */
+.alert {
+  padding: 16px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-left: 4px solid;
+  animation: slideIn 0.3s ease;
+}
+
+.alert.success {
+  background: rgba(var(--success-rgb), 0.1);
+  border-left-color: var(--success);
+  color: var(--success-text);
+}
+
+.alert.error {
+  background: rgba(var(--error-rgb), 0.1);
+  border-left-color: var(--error);
+  color: var(--error-text);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MODAL COMPONENT -->
+      <section class="component" data-type="modal">
+        <div class="component-header">
+          <div class="component-title">
+            <i class="fas fa-window-maximize component-icon"></i>
+            <h2>Modals</h2>
+            <span class="component-badge">Overlay</span>
+          </div>
+          <p class="component-description">
+            Elegant modal dialogs for focused user interactions without leaving
+            the page
+          </p>
+        </div>
+
+        <div class="preview">
+          <div class="preview-header">
+            <h3><i class="fas fa-eye"></i> Preview</h3>
+            <div class="preview-actions">
+              <button class="preview-btn copy-btn" data-target="modal-code">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+              <button class="preview-btn expand-btn" data-target="modal-code">
+                <i class="fas fa-expand"></i> Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="preview-content">
+            <button class="btn primary open-modal-btn" data-modal="demo-modal">
+              <i class="fas fa-external-link-alt"></i> Open Demo Modal
+            </button>
+
+            <button
+              class="btn outline open-modal-btn"
+              data-modal="confirmation-modal"
+            >
+              <i class="fas fa-question-circle"></i> Confirmation Modal
+            </button>
+          </div>
+        </div>
+
+        <div class="code-container collapsed" id="modal-code">
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="html">HTML</button>
+            <button class="code-tab" data-tab="css">CSS</button>
+            <button class="code-tab" data-tab="js">JavaScript</button>
+          </div>
+
+          <div class="code-content">
+            <div class="code-block html-code active">
+              <pre><code class="language-html">&lt;!-- Modal Trigger --&gt;
+&lt;button class="btn primary open-modal-btn" data-modal="demo-modal"&gt;
+  Open Modal
+&lt;/button&gt;
+
+&lt;!-- Modal Structure --&gt;
+&lt;div class="modal" id="demo-modal"&gt;
+  &lt;div class="modal-overlay"&gt;&lt;/div&gt;
+  &lt;div class="modal-content"&gt;
+    &lt;div class="modal-header"&gt;
+      &lt;h3&gt;Modal Title&lt;/h3&gt;
+      &lt;button class="modal-close"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-body"&gt;
+      &lt;p&gt;Modal content goes here.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;button class="btn secondary modal-close"&gt;Cancel&lt;/button&gt;
+      &lt;button class="btn primary"&gt;Confirm&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-block css-code">
+              <pre><code class="language-css">/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: var(--surface);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  z-index: 1001;
+  box-shadow: var(--shadow-xl);
+  animation: slideUp 0.4s ease;
+}</code></pre>
+            </div>
+
+            <div class="code-block js-code">
+              <pre><code class="language-javascript">// Modal functionality
+const openModalBtns = document.querySelectorAll('.open-modal-btn');
+const closeModalBtns = document.querySelectorAll('.modal-close, .modal-overlay');
+
+openModalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    modal.classList.add('active');
+  });
+});
+
+closeModalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal');
+    modal.classList.remove('active');
+  });
+});</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORM COMPONENT -->
+      <section class="component" data-type="form">
+        <div class="component-header">
+          <div class="component-title">
+            <i class="fas fa-edit component-icon"></i>
+            <h2>Forms</h2>
+            <span class="component-badge">Input</span>
+          </div>
+          <p class="component-description">
+            Clean and accessible form elements with validation states and
+            responsive design
+          </p>
+        </div>
+
+        <div class="preview">
+          <div class="preview-header">
+            <h3><i class="fas fa-eye"></i> Preview</h3>
+            <div class="preview-actions">
+              <button class="preview-btn copy-btn" data-target="form-code">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+              <button class="preview-btn expand-btn" data-target="form-code">
+                <i class="fas fa-expand"></i> Expand
+              </button>
+            </div>
+          </div>
+
+          <div class="preview-content">
+            <form class="form-demo" id="demo-form">
+              <div class="form-group">
+                <label for="name">
+                  <i class="fas fa-user"></i> Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+                <div class="form-hint">Please enter your full name</div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">
+                  <i class="fas fa-envelope"></i> Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <div class="form-hint">We'll never share your email</div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-comment"></i> Message
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="Type your message here..."
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" required />
+                <label for="terms">I agree to the terms and conditions</label>
+              </div>
+
+              <div class="form-actions">
+                <button type="reset" class="btn outline">Reset</button>
+                <button type="submit" class="btn primary">
+                  <i class="fas fa-paper-plane"></i> Submit Form
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="code-container collapsed" id="form-code">
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="html">HTML</button>
+            <button class="code-tab" data-tab="css">CSS</button>
+          </div>
+
+          <div class="code-content">
+            <div class="code-block html-code active">
+              <pre><code class="language-html">&lt;form class="form-demo"&gt;
+  &lt;div class="form-group"&gt;
+    &lt;label for="name"&gt;
+      &lt;i class="fas fa-user"&gt;&lt;/i&gt; Full Name
+    &lt;/label&gt;
+    &lt;input type="text" id="name" placeholder="Enter your name" required&gt;
+    &lt;div class="form-hint"&gt;Help text here&lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="form-group"&gt;
+    &lt;label for="email"&gt;Email Address&lt;/label&gt;
+    &lt;input type="email" id="email" placeholder="you@example.com"&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="form-actions"&gt;
+    &lt;button type="submit" class="btn primary"&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+            </div>
+
+            <div class="code-block css-code">
+              <pre><code class="language-css">/* Form Styles */
+.form-demo {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.1);
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODALS -->
+    <div class="modal" id="demo-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3><i class="fas fa-gem"></i> Welcome to UI Gallery</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            This is a demo modal component. You can use it to display important
+            information, confirm actions, or gather user input.
+          </p>
+          <div class="modal-feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Beautiful animations</span>
+          </div>
+          <div class="modal-feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Keyboard accessible</span>
+          </div>
+          <div class="modal-feature">
+            <i class="fas fa-check-circle"></i>
+            <span>Fully responsive</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn outline modal-close">Close</button>
+          <button class="btn primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="confirmation-modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3><i class="fas fa-question-circle"></i> Confirm Action</h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Are you sure you want to proceed with this action? This cannot be
+            undone.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn outline modal-close">Cancel</button>
+          <button class="btn danger">Confirm & Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <i class="fas fa-palette"></i>
+            <h3>UI Components Gallery</h3>
+            <p>
+              A collection of beautiful UI components for modern web development
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <h4>Components</h4>
+            <a href="#buttons">Buttons</a>
+            <a href="#cards">Cards</a>
+            <a href="#alerts">Alerts</a>
+            <a href="#modals">Modals</a>
+            <a href="#forms">Forms</a>
+          </div>
+
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <a href="#docs">Documentation</a>
+            <a href="#github">GitHub</a>
+            <a href="#tutorials">Tutorials</a>
+            <a href="#license">License</a>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p>Get notified about new components and updates</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Your email" />
+              <button class="btn primary">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2026 UI Components Gallery. Made with
+            <i class="fas fa-heart"></i> for developers.
+          </p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-codepen"></i></a>
+            <a href="#"><i class="fab fa-figma"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="copyToast">
+      <i class="fas fa-check-circle"></i>
+      <span>Code copied to clipboard!</span>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
